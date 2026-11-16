@@ -123,6 +123,9 @@ input {
 .search:focus-within {
   border-color: var(--accent);
 }
+.search input:focus-visible {
+  outline: none;
+}
 #count {
   margin: 24px 0;
   color: var(--muted);
