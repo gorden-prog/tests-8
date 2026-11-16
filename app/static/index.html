@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>WorldAtlas - страны мира</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <header><a href="/" class="brand"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="9" />
+          <ellipse cx="12" cy="12" rx="4" ry="9" />
+          <path d="M3 12h18" />
+        </svg> WorldAtlas<span>СПРАВОЧНИК СТРАН</span></a><button id="favorites" aria-pressed="false"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z" />
+          </svg> Избранное</button></header>
+    <main>
+      <div class="intro"><span class="eyebrow">ВЕСЬ МИР В ОДНОМ МЕСТЕ</span>
+        <h1>Мир ближе,<br><em>чем кажется.</em></h1>
+        <p>Открывайте страны, знакомьтесь с культурами<br>и сохраняйте места, которые вдохновляют.</p>
+        <div id="stats" class="stats"></div>
+      </div>
+      <section aria-label="Каталог">
+        <div class="toolbar"><label class="search"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <circle cx="10.5" cy="10.5" r="6.5" />
+              <path d="m16 16 5 5" />
+            </svg><input id="search" type="search" placeholder="Найти страну…" aria-label="Название страны"></label><select id="region" aria-label="Регион">
+            <option value="">Все регионы</option>
+            <option>Africa</option>
+            <option>Americas</option>
+            <option>Asia</option>
+            <option>Europe</option>
+            <option>Oceania</option>
+            <option>Antarctic</option>
+          </select><select id="sort" aria-label="Сортировка">
+            <option value="name:asc">Название: А → Я</option>
+            <option value="population:desc">Население ↓</option>
+            <option value="population:asc">Население ↑</option>
+            <option value="area:desc">Площадь ↓</option>
+            <option value="area:asc">Площадь ↑</option>
+          </select></div>
+        <div id="count"></div>
+        <div id="notice" role="status"></div>
+        <div id="grid" class="grid"></div>
+      </section>
+    </main>
+    <footer>WorldAtlas <span>Справочник стран мира</span></footer>
+    <dialog id="detail"><button id="close" aria-label="Закрыть"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="m6 6 12 12M6 18 18 6" />
+        </svg></button>
+      <div id="detail-content"></div>
+    </dialog>
+  </body>
+</html>
